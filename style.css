@@ -112,7 +112,7 @@ img {
 
 .floater {
   position: absolute;
-  width: 80px; /* previously 40px */
+  width: 300px; /* previously 40px */
   height: auto;
   opacity: 0;
   transform: scale(0.8);
