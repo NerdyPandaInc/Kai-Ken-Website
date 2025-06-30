@@ -16,9 +16,17 @@ body {
   max-width: 800px;
   margin: 2rem auto;
 }
-
-.logo {
-  opacity: 0;
+  .logo {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px; /* reduce width */
+  height: auto;
+  z-index: 1000;
+  pointer-events: none;
+  object-fit: contain;
+  aspect-ratio: 1 / 1; /* forces a square shape */
   animation: fadeInLogo 1s ease-out forwards;
 }
 
