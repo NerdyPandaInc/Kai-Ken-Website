@@ -1,57 +1,28 @@
+const floaters = document.querySelectorAll('.floater');
 
-const canvas = document.getElementById('galaxy');
-const ctx = canvas.getContext('2d');
+function randomizeFloater(floater) {
+  const side = Math.random() > 0.5 ? 'left' : 'right';
+  const offset = Math.floor(Math.random() * 100); // vertical position
+  const delay = Math.random() * 500; // delay in ms
 
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+  floater.style.top = `${offset}%`;
+  floater.style.left = side === 'left' ? '0' : 'unset';
+  floater.style.right = side === 'right' ? '0' : 'unset';
 
-let stars = [];
-
-for (let i = 0; i < 200; i++) {
-  stars.push({
-    x: Math.random() * canvas.width,
-    y: Math.random() * canvas.height,
-    radius: Math.random() * 1.5,
-    speed: Math.random() * 0.5 + 0.2,
-    twinkle: Math.random() * 0.5 + 0.5
-  });
+  setTimeout(() => {
+    floater.style.opacity = 1;
+    floater.style.transform = 'scale(1.2)';
+    setTimeout(() => {
+      floater.style.opacity = 0;
+      floater.style.transform = 'scale(0.8)';
+    }, 1000);
+  }, delay);
 }
 
-function drawGalaxy() {
-  ctx.fillStyle = 'rgba(0, 0, 0, 0.2)';
-  ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-  stars.forEach(star => {
-    ctx.beginPath();
-    ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
-    const red = Math.floor(100 + Math.random() * 155);
-    const alpha = Math.random() * star.twinkle;
-    ctx.fillStyle = `rgba(${red}, 0, 0, ${alpha})`;
-    ctx.fill();
-    star.y += star.speed;
-    if (star.y > canvas.height) {
-      star.y = 0;
-      star.x = Math.random() * canvas.width;
+window.addEventListener('scroll', () => {
+  floaters.forEach(floater => {
+    if (Math.random() > 0.7) { // only animate some on each scroll
+      randomizeFloater(floater);
     }
   });
-
-  requestAnimationFrame(drawGalaxy);
-}
-
-drawGalaxy();
-
-window.addEventListener('resize', () => {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-}
- function bark() {
-  const audio = new Audio('sounds/bark.mp3');
-  audio.play();
-
-  const overlay = document.querySelector('#wrapper::after');
-  document.body.classList.add('warp');
-  setTimeout(() => {
-    document.body.classList.remove('warp');
-  }, 600);
-}                      
-                       );
+});
