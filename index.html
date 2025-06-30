@@ -8,40 +8,57 @@
   <script defer src="script.js"></script>
 </head>
 <body>
+
+  <!-- Galaxy Canvas Background -->
+  <canvas id="galaxy-bg"></canvas>
+
+  <!-- Parallax Nebula Layers -->
   <div class="parallax">
-  <div class="layer layer-back"></div>
-  <div class="layer layer-mid"></div>
-  <div class="layer layer-front"></div>
-</div>
-  <div class="hero">
-    <img src="images/KaiKenLogo2 .png" alt="Kai Ken Logo" class="logo" />
-    <h1>Unleash the Loyalty</h1>
-    <p>The fearless memecoin of the Polygon jungle.</p>
-    <button class="cta" onclick="bark()">Buy Now</button>
+    <div class="layer layer-back"></div>
+    <div class="layer layer-mid"></div>
+    <div class="layer layer-front"></div>
   </div>
 
-  <section class="tokenomics">
-    <h2>Tokenomics</h2>
-    <ul>
-      <li><strong>Supply:</strong> 1,000,000,000</li>
-      <li><strong>Reflections:</strong> 2%</li>
-      <li><strong>Liquidity:</strong> 3%</li>
-      <li><strong>Burn:</strong> 1%</li>
-    </ul>
-  </section>
+  <!-- Main Content Wrapper -->
+  <div id="wrapper">
 
-  <section class="memes">
-    <h2>Meme Zone</h2>
-    <img id="meme" src="images/meme1.png" alt="Kai Ken Meme" />
-    <button onclick="nextMeme()">Next Meme</button>
-  </section>
+    <!-- Hero Section -->
+    <div class="hero">
+      <img src="images/KaiKenLogo2.png" alt="Kai Ken Logo" class="logo" />
+      <h1>Unleash the Loyalty</h1>
+      <p>The fearless memecoin of the Polygon jungle.</p>
+      <button class="cta" onclick="bark()">Buy Now</button>
+    </div>
 
-  <footer>
-    <a href="https://t.me/kaiken" target="_blank">Telegram</a>
-    <a href="https://x.com/kaiken" target="_blank">X (Twitter)</a>
-    <a href="https://dextools.io" target="_blank">DexTools</a>
-  </footer>
+    <!-- Tokenomics Section -->
+    <section class="tokenomics">
+      <h2>Tokenomics</h2>
+      <ul>
+        <li><strong>Supply:</strong> 1,000,000,000</li>
+        <li><strong>Reflections:</strong> 2%</li>
+        <li><strong>Liquidity:</strong> 3%</li>
+        <li><strong>Burn:</strong> 1%</li>
+      </ul>
+    </section>
+
+    <!-- Meme Zone -->
+    <section class="memes">
+      <h2>Meme Zone</h2>
+      <img id="meme" src="images/meme1.png" alt="Kai Ken Meme" />
+      <button onclick="nextMeme()">Next Meme</button>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <a href="https://t.me/kaiken" target="_blank">Telegram</a>
+      <a href="https://x.com/kaiken" target="_blank">X (Twitter)</a>
+      <a href="https://dextools.io" target="_blank">DexTools</a>
+    </footer>
+
+  </div>
+
+  <!-- Falling Logos Overlay -->
   <div class="falling-logos"></div>
-  <canvas id="galaxy"></canvas>
+
 </body>
 </html>
