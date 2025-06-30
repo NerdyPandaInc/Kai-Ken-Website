@@ -16,7 +16,6 @@ body {
   max-width: 800px;
   margin: 2rem auto;
 }
-
 .logo {
   position: fixed;
   top: 20px;
@@ -30,7 +29,6 @@ body {
   animation: fadeInLogo 4s ease-out forwards;
   opacity: 0; /* Ensures fade-in works */
 }
-
 @keyframes fadeInLogo {
   from {
     opacity: 0;
