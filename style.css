@@ -73,3 +73,12 @@ p {
 
 footer {
   margin: 2rem
+}
+  .logo {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px; /* or your preferred size */
+  z-index: 1000;
+}
