@@ -25,7 +25,7 @@ body {
   height: 120px;                    /* Maintains aspect ratio */
   z-index: 1000;                   /* Ensures it stays above other elements */
   pointer-events: none;           /* Allows clicks to pass through the logo */
-  object-fit: cover;            /* Ensures the image fits within its box */
+  object-fit: contain;            /* Ensures the image fits within its box */
   aspect-ratio: 1 / 1;            /* Forces a square shape for symmetry */
   animation: fadeInLogo 4s ease-out forwards; /* Smooth fade-in on load */
 }
