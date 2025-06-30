@@ -29,8 +29,6 @@ body {
   aspect-ratio: 1 / 1;            /* Forces a square shape for symmetry */
   animation: fadeInLogo 4s ease-out forwards; /* Smooth fade-in on load */
 }
-
-
 }
 
 @keyframes fadeInLogo {
