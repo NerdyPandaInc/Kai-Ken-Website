@@ -112,12 +112,12 @@ img {
 
 .floater {
   position: absolute;
-  width: 40px;
+  width: 80px; /* previously 40px */
   height: auto;
   opacity: 0;
   transform: scale(0.8);
   transition: opacity 1s ease, transform 1s ease;
-  filter: blur(0.5px);
   will-change: transform, opacity;
+  filter: blur(0.5px);
 }
 
