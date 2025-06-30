@@ -1,50 +1,31 @@
-body {
-  margin: 0;
-  font-family: 'Arial', sans-serif;
-  background: linear-gradient(to bottom, #0d0d0d, #1a1a1a);
-  color: #fff;
-  text-align: center;
+.falling-logos {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
 }
 
-.hero {
-  padding: 100px 20px;
-  background: url('images/bg.gif') center/cover no-repeat;
+.falling-logo {
+  position: absolute;
+  top: -100px;
+  width: 40px;
+  height: 40px;
+  background-image: url('images/KaiKenLogo2.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation: fall linear infinite;
+  opacity: 0.8;
 }
 
-.logo {
-  width: 180px;
-  margin-bottom: 20px;
-}
-
-.cta {
-  padding: 15px 30px;
-  background: #ff004f;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  font-size: 1.2em;
-  cursor: pointer;
-  transition: transform 0.2s ease;
-}
-
-.cta:hover {
-  transform: scale(1.1);
-  background: #ff3366;
-}
-
-.tokenomics, .memes {
-  margin: 60px auto;
-  max-width: 600px;
-}
-
-footer {
-  margin-top: 60px;
-  padding: 20px;
-  background: #111;
-}
-
-footer a {
-  margin: 0 10px;
-  color: #ff004f;
-  text-decoration: none;
+@keyframes fall {
+  0% {
+    transform: translateY(-100px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(110vh) rotate(360deg);
+  }
 }
