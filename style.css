@@ -13,9 +13,9 @@ body {
 /* === Logo === */
 .logo {
   display: block;
-  margin: 60px auto 30px auto; /* top, sides, bottom */
-  width: 500px;                /* larger and centered */
-  max-width: 90vw;             /* responsive fallback */
+  margin: 0 auto;
+  width: 500px;
+  max-width: 90vw;
   height: auto;
   object-fit: contain;
   animation: fadeInLogo 4s ease-out forwards;
