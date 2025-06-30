@@ -1,1 +1,41 @@
 
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to bottom, #0d0d0d, #1a1a1a);
+  color: #fff;
+  text-align: center;
+}
+
+.hero {
+  padding: 100px 20px;
+  background: url('images/bg.gif') center/cover no-repeat;
+}
+
+.logo {
+  width: 180px;
+  margin-bottom: 20px;
+}
+
+.cta {
+  padding: 15px 30px;
+  background: #ff004f;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.cta:hover {
+  transform: scale(1.1);
+  background: #ff3366;
+}
+
+.tokenomics, .memes {
+  margin: 60px auto;
+  max-width: 600px;
+}
+
+footer {
