@@ -1,3 +1,4 @@
+/* === Global Styles === */
 body {
   background-image: url('images/back.png');
   background-size: cover;
@@ -9,31 +10,36 @@ body {
   text-align: center;
 }
 
+/* === Logo === */
+.logo {
+  display: block;
+  margin: 60px auto 30px auto; /* top, sides, bottom */
+  width: 500px;                /* larger and centered */
+  max-width: 90vw;             /* responsive fallback */
+  height: auto;
+  object-fit: contain;
+  animation: fadeInLogo 4s ease-out forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInLogo {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* === Hero Section === */
 .hero {
   background-color: rgba(0, 0, 0, 0.6);
   padding: 3rem 1rem;
   border-radius: 12px;
   max-width: 800px;
   margin: 2rem auto;
-}
-.logo {
-    display: block;
-  margin: 40px auto 20px auto; /* top, right/left, bottom spacing */
-  width: 350px;
-  height: auto;
-  object-fit: contain;
-  animation: fadeInLogo 4s ease-out forwards;
-  opacity: 0;
-}
-@keyframes fadeInLogo {
-  from {
-    opacity: 0;
-    transform: translateX(-50%) scale(0.9);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(-50%) scale(1);
-  }
 }
 
 h1 {
@@ -61,6 +67,7 @@ p {
   background-color: #e03e00;
 }
 
+/* === Tokenomics & Memes Sections === */
 .tokenomics,
 .memes {
   background-color: rgba(0, 0, 0, 0.5);
@@ -86,36 +93,16 @@ p {
   margin: 0.5rem 0;
 }
 
+/* === Footer === */
 footer {
   margin: 2rem;
 }
 
-img {
+/* === Image Defaults (excluding logo) === */
+img:not(.logo) {
   width: 50%;
   height: auto;
   aspect-ratio: 16 / 9;
 }
 
-/* Floating Images */
-.scroll-floaters {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 0;
-  overflow: hidden;
-}
-
-.floater {
-  position: absolute;
-  width: 300px; /* Larger floaters */
-  height: auto;
-  opacity: 0;
-  transform: scale(0.8);
-  transition: opacity 1s ease, transform 1s ease;
-  will-change: transform, opacity;
-  filter: blur(0.5px);
-}
-
+/* === Floating Images
