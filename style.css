@@ -13,7 +13,8 @@ body {
 }
 
 .logo {
-  width: 180px;
+  width: 300px; /* Increase this value as needed */
+  max-width: 90%;
   margin-bottom: 20px;
 }
 
