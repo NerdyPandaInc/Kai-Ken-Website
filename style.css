@@ -3,7 +3,7 @@ body, html {
   padding: 0;
   overflow-x: hidden;
   height: 100%;
-  background: transparent; /* Let galaxy and parallax show through */
+  background: transparent;
   font-family: 'Arial', sans-serif;
   color: #fff;
   text-align: center;
@@ -11,11 +11,18 @@ body, html {
   z-index: 1;
 }
 
-.hero {
-  padding: 100px 20px;
-  background: transparent; /* Remove background image to show animation */
-  z-index: 2;
+.hero,
+.tokenomics,
+.memes,
+footer,
+#wrapper,
+section,
+header,
+main,
+nav {
+  background: transparent !important;
   position: relative;
+  z-index: 2;
 }
 
 .logo {
@@ -32,4 +39,22 @@ body, html {
   border-radius: 8px;
   font-size: 1.2em;
   cursor: pointer;
-  transition
+  transition: transform 0.2s ease;
+  z-index: 2;
+  position: relative;
+}
+
+.cta:hover {
+  transform: scale(1.1);
+  background: #ff3366;
+}
+
+.hero h1,
+.hero p,
+.cta,
+.tokenomics h2,
+.memes h2 {
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+.f
