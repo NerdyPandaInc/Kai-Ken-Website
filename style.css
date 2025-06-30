@@ -13,7 +13,6 @@ html, body {
 }
 
 /* Transparent Sections */
-#wrapper,
 .hero,
 .tokenomics,
 .memes,
@@ -25,6 +24,11 @@ nav {
   background: transparent !important;
   position: relative;
   z-index: 2;
+}
+
+/* Make wrapper invisible but keep its children visible */
+#wrapper {
+  display: contents;
 }
 
 /* Logo */
@@ -86,4 +90,27 @@ nav {
   opacity: 0.8;
 }
 
-@keyframes fall
+@keyframes fall {
+  0% {
+    transform: translateY(-100px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(110vh) rotate(360deg);
+  }
+}
+
+/* Galaxy Canvas Background */
+#galaxy-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -3;
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  background: black;
+}
+
+/* Parallax Nebula Layers */
+.parallax {
+  position
