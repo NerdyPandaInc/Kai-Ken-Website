@@ -1,4 +1,5 @@
-body, html {
+/* Base Layout */
+html, body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
@@ -11,11 +12,12 @@ body, html {
   z-index: 1;
 }
 
+/* Transparent Sections */
+#wrapper,
 .hero,
 .tokenomics,
 .memes,
 footer,
-#wrapper,
 section,
 header,
 main,
@@ -25,12 +27,14 @@ nav {
   z-index: 2;
 }
 
+/* Logo */
 .logo {
   width: 300px;
   max-width: 90%;
   margin-bottom: 20px;
 }
 
+/* CTA Button */
 .cta {
   padding: 15px 30px;
   background: #ff004f;
@@ -49,6 +53,7 @@ nav {
   background: #ff3366;
 }
 
+/* Text Shadows for Readability */
 .hero h1,
 .hero p,
 .cta,
@@ -64,4 +69,21 @@ nav {
   left: 0;
   width: 100%;
   height: 100%;
-  pointer-events
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.falling-logo {
+  position: absolute;
+  top: -100px;
+  width: 40px;
+  height: 40px;
+  background-image: url('images/KaiKenLogo2.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation: fall linear infinite;
+  opacity: 0.8;
+}
+
+@keyframes fall
