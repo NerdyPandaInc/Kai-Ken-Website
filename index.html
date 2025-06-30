@@ -1,8 +1,40 @@
-
 <!DOCTYPE html>
-<html>
-  <head><title>Kai Ken</title></head>
-  <body>
-    <h1>Hello from Kai Ken!</h1>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kai Ken Token</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div class="hero">
+    <img src="images/kai-ken-logo.png" alt="Kai Ken Logo" class="logo" />
+    <h1>Unleash the Loyalty</h1>
+    <p>The fearless memecoin of the Polygon jungle.</p>
+    <button class="cta" onclick="bark()">Buy Now</button>
+  </div>
+
+  <section class="tokenomics">
+    <h2>Tokenomics</h2>
+    <ul>
+      <li><strong>Supply:</strong> 1,000,000,000</li>
+      <li><strong>Reflections:</strong> 2%</li>
+      <li><strong>Liquidity:</strong> 3%</li>
+      <li><strong>Burn:</strong> 1%</li>
+    </ul>
+  </section>
+
+  <section class="memes">
+    <h2>Meme Zone</h2>
+    <img id="meme" src="images/meme1.png" alt="Kai Ken Meme" />
+    <button onclick="nextMeme()">Next Meme</button>
+  </section>
+
+  <footer>
+    <a href="https://t.me/kaiken" target="_blank">Telegram</a>
+    <a href="https://x.com/kaiken" target="_blank">X (Twitter)</a>
+    <a href="https://dextools.io" target="_blank">DexTools</a>
+  </footer>
+</body>
 </html>
