@@ -83,7 +83,7 @@ footer {
   margin: 2rem
 }
 img {
-  width: 100%;
+  width: 50%;
   height: auto;
   aspect-ratio: 16 / 9; /* or whatever fits your layout */
 }
