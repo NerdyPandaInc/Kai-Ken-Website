@@ -43,4 +43,15 @@ drawGalaxy();
 window.addEventListener('resize', () => {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
-});
+}
+ function bark() {
+  const audio = new Audio('sounds/bark.mp3');
+  audio.play();
+
+  const overlay = document.querySelector('#wrapper::after');
+  document.body.classList.add('warp');
+  setTimeout(() => {
+    document.body.classList.remove('warp');
+  }, 600);
+}                      
+                       );
