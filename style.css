@@ -22,7 +22,7 @@ body {
   top: 20px;
   left: 50%;
   transform: translateX(-50%);
-  width: 180px; /* Larger and proportionate */
+  width: 350px; /* Larger and proportionate */
   height: auto;
   z-index: 1000;
   pointer-events: none;
