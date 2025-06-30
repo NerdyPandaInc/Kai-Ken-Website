@@ -4,14 +4,72 @@ body {
   background-position: center;
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+  text-align: center;
 }
 
-.wrapper {
-  background-color: rgba(255, 255, 255, 0.6); /* semi-transparent white */
-  padding: 2rem;
-  margin: 2rem auto;
+.hero {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 3rem 1rem;
+  border-radius: 12px;
   max-width: 800px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  margin: 2rem auto;
 }
+
+.logo {
+  width: 120px; /* smaller logo */
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.cta {
+  background-color: #ff4500;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cta:hover {
+  background-color: #e03e00;
+}
+
+.tokenomics, .memes {
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: 2rem auto;
+  padding: 2rem;
+  max-width: 800px;
+  border-radius: 12px;
+}
+
+.tokenomics h2, .memes h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.tokenomics ul {
+  list-style: none;
+  padding: 0;
+  font-size: 1.2rem;
+}
+
+.tokenomics li {
+  margin: 0.5rem 0;
+}
+
+footer {
+  margin: 2rem
