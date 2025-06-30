@@ -16,18 +16,21 @@ body {
   max-width: 800px;
   margin: 2rem auto;
 }
-  .logo {
-  position: fixed;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 110px; /* reduce width */
-  height: auto;
-  z-index: 1000;
-  pointer-events: none;
-  object-fit: contain;
-  aspect-ratio: 1 / 1; /* forces a square shape */
-  animation: fadeInLogo 1s ease-out forwards;
+.logo {
+  position: fixed;                  /* Keeps the logo in place while scrolling */
+  top: 20px;                        /* Distance from the top of the viewport */
+  left: 50%;                        /* Centers the logo horizontally */
+  transform: translateX(-50%);     /* Offsets it by half its width to truly center */
+  width: 120px;                    /* Controls the logo's width */
+  height: auto;                    /* Maintains aspect ratio */
+  z-index: 1000;                   /* Ensures it stays above other elements */
+  pointer-events: none;           /* Allows clicks to pass through the logo */
+  object-fit: contain;            /* Ensures the image fits within its box */
+  aspect-ratio: 1 / 1;            /* Forces a square shape for symmetry */
+  animation: fadeInLogo 4s ease-out forwards; /* Smooth fade-in on load */
+}
+
+
 }
 
 @keyframes fadeInLogo {
