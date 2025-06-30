@@ -17,18 +17,13 @@ body {
   margin: 2rem auto;
 }
 .logo {
-  position: fixed;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
+    display: block;
+  margin: 40px auto 20px auto; /* top, right/left, bottom spacing */
   width: 350px;
   height: auto;
-  z-index: 1000;
-  pointer-events: none;
   object-fit: contain;
   animation: fadeInLogo 4s ease-out forwards;
   opacity: 0;
-  padding-top: 10px;
 }
 @keyframes fadeInLogo {
   from {
