@@ -16,28 +16,30 @@ body {
   max-width: 800px;
   margin: 2rem auto;
 }
+
 .logo {
-  position: fixed;                  /* Keeps the logo in place while scrolling */
-  top: 20px;                        /* Distance from the top of the viewport */
-  left: 50%;                        /* Centers the logo horizontally */
-  transform: translateX(-50%);     /* Offsets it by half its width to truly center */
-  width: 120px;                    /* Controls the logo's width */
-  height: 120px;                    /* Maintains aspect ratio */
-  z-index: 1000;                   /* Ensures it stays above other elements */
-  pointer-events: none;           /* Allows clicks to pass through the logo */
-  object-fit: contain;            /* Ensures the image fits within its box */
-  aspect-ratio: 1 / 1;            /* Forces a square shape for symmetry */
-  animation: fadeInLogo 4s ease-out forwards; /* Smooth fade-in on load */
-}
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 180px; /* Larger and proportionate */
+  height: auto;
+  z-index: 1000;
+  pointer-events: none;
+  object-fit: contain;
+  animation: fadeInLogo 4s ease-out forwards;
+  opacity: 0; /* Ensures fade-in works */
 }
 
 @keyframes fadeInLogo {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) scale(0.9);
+  }
   to {
     opacity: 1;
+    transform: translateX(-50%) scale(1);
   }
-}
-
-
 }
 
 h1 {
@@ -65,7 +67,8 @@ p {
   background-color: #e03e00;
 }
 
-.tokenomics, .memes {
+.tokenomics,
+.memes {
   background-color: rgba(0, 0, 0, 0.5);
   margin: 2rem auto;
   padding: 2rem;
@@ -73,7 +76,8 @@ p {
   border-radius: 12px;
 }
 
-.tokenomics h2, .memes h2 {
+.tokenomics h2,
+.memes h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
 }
@@ -89,13 +93,16 @@ p {
 }
 
 footer {
-  margin: 2rem
+  margin: 2rem;
 }
+
 img {
   width: 50%;
   height: auto;
-  aspect-ratio: 16 / 9; /* or whatever fits your layout */
+  aspect-ratio: 16 / 9;
 }
+
+/* Floating Images */
 .scroll-floaters {
   position: fixed;
   top: 0;
@@ -106,9 +113,10 @@ img {
   z-index: 0;
   overflow: hidden;
 }
+
 .floater {
   position: absolute;
-  width: 300px; /* previously 40px */
+  width: 300px; /* Larger floaters */
   height: auto;
   opacity: 0;
   transform: scale(0.8);
@@ -116,4 +124,3 @@ img {
   will-change: transform, opacity;
   filter: blur(0.5px);
 }
-
