@@ -118,8 +118,4 @@ img {
   will-change: transform, opacity;
   filter: blur(0.5px);
 }
-body {
-  padding-top: 220px; /* adjust based on actual logo height */
-}
-
 
