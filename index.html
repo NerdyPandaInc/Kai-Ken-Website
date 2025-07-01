@@ -73,54 +73,101 @@
       </tbody>
     </table>
 
-    <!-- Roadmap -->
-<h2 style="margin-top: 4rem; color: #ffcc00;">🛣️ Roadmap</h2>
-<div style="margin-top: 2rem;">
-  <div class="roadmap-stage">
-    <h3 style="color: #00ffcc;">✅ Stage 1: Foundation</h3>
-    <ul style="margin-left: 1.5rem;">
-      <li>Smart contract development and audit</li>
-      <li>Initial owner distribution</li>
-      <li>Website and branding launch</li>
-    </ul>
-  </div>
+<!-- Roadmap -->
+<section style="background: #0e0e0e; padding: 4rem 1rem;">
+  <h2 class="section-title" style="text-align: center; color: #ffcc00; font-size: 2rem;">🛣️ Roadmap</h2>
+<p style="text-align: center; color: #888; font-size: 0.9rem;">Swipe → to explore the roadmap</p>
+  <div class="roadmap-wrapper" id="roadmap">
+    <div class="roadmap-stage">
+      <h3 style="color: #00ffcc;">✅ Stage 1: Foundation</h3>
+      <ul style="margin-left: 1.5rem;">
+        <li>Smart contract development and audit</li>
+        <li>Initial owner distribution</li>
+        <li>Website and branding launch</li>
+      </ul>
+    </div>
 
-<h2 class="section-title">🛣️ Roadmap</h2>
-<div class="roadmap-wrapper" id="roadmap">
-  <div class="roadmap-stage">
-    <h3>✅ Stage 1: Foundation</h3>
-    <ul>
-      <li>Smart contract development and audit</li>
-      <li>Initial owner distribution</li>
-      <li>Website and branding launch</li>
-    </ul>
-  </div>
+    <div class="roadmap-stage">
+      <h3 style="color: #00ffcc;">🚀 Stage 2: Community & Awareness</h3>
+      <ul style="margin-left: 1.5rem;">
+        <li>Launch on Polygon mainnet</li>
+        <li>Meme campaigns and viral content</li>
+        <li>Community building and Telegram/Discord setup</li>
+      </ul>
+    </div>
 
-  <div class="roadmap-stage">
-    <h3>🚀 Stage 2: Community & Awareness</h3>
-    <ul>
-      <li>Launch on Polygon mainnet</li>
-      <li>Meme campaigns and viral content</li>
-      <li>Community building and Telegram/Discord setup</li>
-    </ul>
-  </div>
+    <div class="roadmap-stage">
+      <h3 style="color: #00ffcc;">🛠️ Stage 3: Utility & Rewards</h3>
+      <ul style="margin-left: 1.5rem;">
+        <li>Launch of Loyalty Rewards dApp</li>
+        <li>WalletConnect + QR support</li>
+        <li>Gamified loyalty leaderboard</li>
+      </ul>
+    </div>
 
-  <div class="roadmap-stage">
-    <h3>🛠️ Stage 3: Utility & Rewards</h3>
-    <ul>
-      <li>Launch of Loyalty Rewards dApp</li>
-      <li>WalletConnect + QR support</li>
-      <li>Gamified loyalty leaderboard</li>
-    </ul>
+    <div class="roadmap-stage">
+      <h3 style="color: #00ffcc;">🌐 Stage 4: Expansion & Listings</h3>
+      <ul style="margin-left: 1.5rem;">
+        <li>CEX listings (Tier 2–3)</li>
+        <li>Loyalty Rewards dApp v2 with analytics</li>
+        <li>Cross-chain bridge exploration</li>
+      </ul>
+    </div>
   </div>
+</section>
 
-  <div class="roadmap-stage">
-    <h3>🌐 Stage 4: Expansion & Listings</h3>
-    <ul>
-      <li>CEX listings (Tier 2–3)</li>
-      <li>Loyalty Rewards dApp v2 with analytics</li>
-      <li>Cross-chain bridge exploration</li>
-    </ul>
-  </div>
-</div>
+<!-- Styles -->
+<style>
+  .roadmap-wrapper {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 1rem;
+    padding: 2rem 0;
+  }
+
+  .roadmap-stage {
+    flex: 0 0 80%;
+    max-width: 80%;
+    background: #1a1a1a;
+    border-radius: 12px;
+    padding: 1.5rem;
+    scroll-snap-align: start;
+    opacity: 0;
+    transform: translateX(60px);
+    transition: all 0.6s ease-out;
+    color: #f5f5f5;
+  }
+
+  .roadmap-stage.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .roadmap-stage h3 {
+    margin-bottom: 0.5rem;
+  }
+
+  .section-title {
+    margin-bottom: 1rem;
+  }
+</style>
+
+<!-- Animation Script -->
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, {
+    threshold: 0.5
+  });
+
+  document.querySelectorAll('.roadmap-stage').forEach(stage => {
+    observer.observe(stage);
+  });
+</script>
 </section>
