@@ -32,7 +32,9 @@ body {
     opacity: 1;
     transform: scale(1);
   }
-  /* === Entry Overlay Pop-Up === */
+}
+
+/* === Entry Overlay Pop-Up === */
 #entry-overlay {
   position: fixed;
   top: 0;
@@ -85,5 +87,4 @@ body {
 }
 
 #enter-btn:hover {
-  background-color: #00ddb3;
-}
+  background-color
