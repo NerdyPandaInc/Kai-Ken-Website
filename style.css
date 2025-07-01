@@ -118,4 +118,36 @@ body {
   padding: 2rem 1rem;
   white-space: nowrap;
 }
+.loyalty {
+  background: rgba(20, 0, 0, 0.7);
+  border: 2px solid rgba(255, 60, 60, 0.4);
+  box-shadow: 0 0 20px rgba(255, 60, 60, 0.3);
+  padding: 2.5rem;
+  border-radius: 12px;
+  max-width: 800px;
+  margin: 3rem auto;
+  color: #fff;
+  text-align: center;
+}
+
+.loyalty h2 {
+  font-size: 2rem;
+  color: #ff3c3c;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 8px rgba(255, 60, 60, 0.6);
+}
+
+.loyalty p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.loyalty ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.loyal
 
