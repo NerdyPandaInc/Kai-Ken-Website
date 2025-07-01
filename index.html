@@ -8,23 +8,23 @@
 </head>
 <body>
 
-<!-- 🔊 Hidden Background Music -->
-<audio id="bg-music" loop hidden>
-  <source src="audio/intro-remastered.mp3" type="audio/mpeg">
-  Your browser does not support the audio element.
-</audio>
+  <!-- 🔊 Hidden Background Music -->
+  <audio id="bg-music" loop hidden>
+    <source src="audio/intro-remastered.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
 
-<!-- 🚪 Entry Overlay Pop-Up -->
-<div id="entry-overlay">
-  <div class="entry-box">
-    <h1>Welcome to Kai Ken</h1>
-    <p>Unleash the loyalty. Embrace the burn.</p>
-    <button id="enter-btn">Enter Site</button>
+  <!-- 🚪 Entry Overlay Pop-Up -->
+  <div id="entry-overlay">
+    <div class="entry-box">
+      <h1>Welcome to Kai Ken</h1>
+      <p>Unleash the loyalty. Embrace the burn.</p>
+      <button id="enter-btn">Enter Site</button>
+    </div>
   </div>
-</div>
 
   <!-- 🌟 Main Content -->
-  <img src="images/KaiKenLogo2 .png" alt="Kai Ken Logo" class="logo" />
+  <img src="images/KaiKenLogo2.png" alt="Kai Ken Logo" class="logo" />
 
   <div class="hero">
     <h1>Unleash the Loyalty</h1>
@@ -156,21 +156,6 @@
       observer.observe(stage);
     });
   </script>
-<script>
-  document.getElementById("enter-btn").addEventListener("click", () => {
-    const overlay = document.getElementById("entry-overlay");
-    const music = document.getElementById("bg-music");
 
-    // Fade out the overlay
-    overlay.classList.add("hidden");
-
-    // Start music after slight delay
-    setTimeout(() => {
-      music.play().catch((err) => {
-        console.warn("Autoplay blocked:", err);
-      });
-    }, 300);
-  });
-</script>
 </body>
 </html>
