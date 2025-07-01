@@ -19,7 +19,7 @@ body {
   max-width: 90vw;
   height: auto;
   object-fit: contain;
-  animation: fadeInLogo 4s ease-out forwards;
+  animation: fadeInLogo 7s ease-out forwards;
   opacity: 0;
 }
 
