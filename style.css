@@ -72,7 +72,7 @@ body {
 .entry-box p {
   font-size: 1.2rem;
   margin-bottom: 2rem;
-  color: #ccc;
+  box-shadow: 0 0 25px rgba(255, 50, 50, 0.8);
 }
 
 #enter-btn {
