@@ -73,14 +73,20 @@ p {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background: rgba(10, 10, 10, 0.95);
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 9999;
+  opacity: 1;
   transition: opacity 1s ease;
+}
+
+#entry-overlay.hidden {
+  opacity: 0;
+  pointer-events: none;
 }
 
 .entry-box {
@@ -179,59 +185,4 @@ p {
   color: #ffcc00;
   font-size: 2rem;
   margin-top: 4rem;
-}
-/* === Entry Overlay === */
-#entry-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(10, 10, 10, 0.95);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-  opacity: 1;
-  transition: opacity 1s ease;
-}
-
-#entry-overlay.hidden {
-  opacity: 0;
-  pointer-events: none;
-}
-
-.entry-box {
-  text-align: center;
-  background: #1a1a1a;
-  padding: 3rem;
-  border-radius: 12px;
-  box-shadow: 0 0 20px #00ffcc;
-}
-
-.entry-box h1 {
-  font-size: 2.5rem;
-  color: #ffcc00;
-  margin-bottom: 1rem;
-}
-
-.entry-box p {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-  color: #ccc;
-}
-
-#enter-btn {
-  background-color: #00ffcc;
-  color: #000;
-  border: none;
-  padding: 0.75rem 2rem;
-  font-size: 1.1rem;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-#enter-btn:hover {
-  background-color: #00ddb3;
 }
