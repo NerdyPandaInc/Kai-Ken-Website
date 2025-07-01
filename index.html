@@ -31,6 +31,19 @@
     <h2>Tokenomics</h2>
     <!-- more content here -->
   </section>
+  <script>
+  document.getElementById("enter-btn").addEventListener("click", () => {
+    const overlay = document.getElementById("entry-overlay");
+    const music = document.getElementById("bg-music");
+
+    overlay.style.opacity = "0";
+    setTimeout(() => overlay.style.display = "none", 1000);
+
+    music.play().catch(() => {
+      console.warn("Autoplay blocked. User interaction required.");
+    });
+  });
+</script>
 </body>
 </html>
 
