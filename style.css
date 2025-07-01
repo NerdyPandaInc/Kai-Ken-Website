@@ -122,48 +122,69 @@ img:not(.logo) {
   margin-bottom: 2rem;
 }
 <style>
-  .roadmap-wrapper {
-    overflow-x: auto;
-    display: flex;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    gap: 1rem;
-    padding: 2rem 1rem;
-  }
+/* === Roadmap Wrapper === */
+.roadmap-wrapper {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  gap: 1rem;
+  padding: 2rem 1rem;
+  white-space: nowrap;
+}
 
-  .roadmap-stage {
-    flex: 0 0 80%;
-    max-width: 80%;
-    background: #1a1a1a;
-    border-radius: 12px;
-    padding: 1.5rem;
-    scroll-snap-align: start;
-    opacity: 0;
-    transform: translateX(60px);
-    transition: all 0.6s ease-out;
-    color: #f5f5f5;
-  }
+/* === Roadmap Stage Cards === */
+.roadmap-stage {
+  flex: 0 0 80%;
+  min-width: 300px;
+  max-width: 80%;
+  background: #1a1a1a;
+  border-radius: 12px;
+  padding: 2rem;
+  scroll-snap-align: start;
+  opacity: 0;
+  transform: translateX(60px);
+  transition: all 0.6s ease-out;
+  color: #f5f5f5;
+  white-space: normal;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
-  .roadmap-stage.visible {
-    opacity: 1;
-    transform: translateX(0);
-  }
+/* === Visible Animation Trigger === */
+.roadmap-stage.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
 
-  .roadmap-stage h3 {
-    color: #00ffcc;
-    margin-bottom: 0.5rem;
-  }
+/* === Headings and Lists === */
+.roadmap-stage h3 {
+  color: #00ffcc;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
 
-  .roadmap-stage ul {
-    margin-left: 1.5rem;
-  }
+.roadmap-stage ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 1.1rem;
+}
 
-  h2.section-title {
-    text-align: center;
-    color: #ffcc00;
-    font-size: 2rem;
-    margin-top: 4rem;
-  }
-</style>
+.roadmap-stage li {
+  margin: 0.5rem 0;
+}
+
+/* === Section Title === */
+.section-title {
+  text-align: center;
+  color: #ffcc00;
+  font-size: 2rem;
+  margin-top: 4rem;
+}
 
 /* === Floating Images
