@@ -156,6 +156,21 @@
       observer.observe(stage);
     });
   </script>
+<script>
+  document.getElementById("enter-btn").addEventListener("click", () => {
+    const overlay = document.getElementById("entry-overlay");
+    const music = document.getElementById("bg-music");
 
+    // Fade out the overlay
+    overlay.classList.add("hidden");
+
+    // Start music after slight delay
+    setTimeout(() => {
+      music.play().catch((err) => {
+        console.warn("Autoplay blocked:", err);
+      });
+    }, 300);
+  });
+</script>
 </body>
 </html>
